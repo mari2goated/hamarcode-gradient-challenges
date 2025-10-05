@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Code2, Trophy, Users, TrendingUp } from "lucide-react";
+import { Code2, Trophy, Users, TrendingUp, Calendar } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import { Card } from "@/components/ui/card";
 
@@ -24,9 +24,12 @@ const Home = () => {
                 Start Practicing
               </Button>
             </Link>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto">
-              View Problems
-            </Button>
+            <Link to="/auth">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto">
+                <Calendar className="mr-2 w-5 h-5" />
+                Study Timetable
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
